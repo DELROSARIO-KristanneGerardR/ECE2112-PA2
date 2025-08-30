@@ -1,36 +1,42 @@
 # ECE2112-PA2
 ## Normalization Problem: 
-Step 1: For this problem, we first need to import the ```numpy``` library, since its needed to be able to use the functions that will later be used in the problem. Also, ```np``` is just an alias to make referencing shorter.
+<p align="justify">Step 1: For this problem, we first need to import the ```numpy``` library, since its needed to be able to use the functions that will later be used in the problem. Also, ```np``` is just an alias to make referencing shorter. </p>
+
 ```py
 import numpy as np
 ```
 
-Step 2:  We then need to create a 5x5 array and use the ```random.random(())``` function in order for the array to generate random floats and store it in variable ```X```.  
+<p align="justify">Step 2:  We then need to create a 5x5 array and use the ```random.random(())``` function in order for the array to generate random floats and store it in variable ```X```.  </p>
 ```py
 X=np.random.random((5,5))
 ```
 
-Step 3.1: Now, we need to first find the mean and standard deviation of the array in order to normalize it. We can use the ```.mean()``` method to find the mean of the array and store it under variable ```mean```.
+<p align="justify">Step 3.1: Now, we need to first find the mean and standard deviation of the array in order to normalize it. We can use the ```.mean()``` method to find the mean of the array and store it under variable ```mean```.</p>
+
 ```py
 mean=X.mean()
 ```
 
-Step 3.2: We use the ```.std()``` method to find the standard deviation of the array and store it under variable ```standard_deviation```.
+<p align="justify">Step 3.2: We use the ```.std()``` method to find the standard deviation of the array and store it under variable ```standard_deviation```.</p>
+
 ```py
 standard_deviation=X.std()
 ```
 
-Step 4: We can now normalize the array by using the formula ```Z=(X-x̄)/σ```. Where ```Z``` is the **normalized/standardized value**, ```X``` is the **raw value** of our array, ```x̄``` is the **mean**, and ```σ``` is the **standard deviation**. We then store the values under variable named ```Z_array``` since its an array of normalized values.
+<p align="justify">Step 4: We can now normalize the array by using the formula ```Z=(X-x̄)/σ```. Where ```Z``` is the **normalized/standardized value**, ```X``` is the **raw value** of our array, ```x̄``` is the **mean**, and ```σ``` is the **standard deviation**. We then store the values under variable named ```Z_array``` since its an array of normalized values.</p>
+
 ```py
 Z_array=(X-mean)/standard_deviation
 ```
 
-Step 5: Now that the calculations are done, we can finally save the values stored into ```Z_array``` to a ```.npy``` file named ```X_normalized.npy```.
+<p align="justify">Step 5: Now that the calculations are done, we can finally save the values stored into ```Z_array``` to a ```.npy``` file named ```X_normalized.npy```.</p>
+
 ```py
 np.save("X_normalized.npy", Z_array)
 ```
 
-Step 6: Print out the variables ```X``` and ```X_normalized.npy``` for verification purposes.
+<p align="justify">Step 6: Print out the variables ```X``` and ```X_normalized.npy``` for verification purposes.</p>
+
 ```py
 print(repr(X))
 array([[0.14180879, 0.61070286, 0.3586823 , 0.86059853, 0.19274675],
@@ -50,7 +56,8 @@ array([[-1.00680811,  0.69627673, -0.21909502,  1.6039306 , -0.82179475],
 <br>
 
 ## Divisible by 3 Problem:
-Step 1: Same as the previous problem, we import the ```numpy``` library before we try to code as its functions will be required. Though Python alone can handle this, the inclusion of the NumPy library gives faster operations and built-in methods for arrays, reshaping, and math.
+<p align="justify">Step 1: Same as the previous problem, we import the ```numpy``` library before we try to code as its functions will be required. Though Python alone can handle this, the inclusion of the NumPy library gives faster operations and built-in methods for arrays, reshaping, and math.</p>
+
 ```py
 import numpy as np
 ```
@@ -61,7 +68,8 @@ import numpy as np
 squared_values = np.arange(1, 101) ** 2
 ```
 
-Step 3: This step is not important, we can print out the array to verify if the output is correct.
+<p align="justify">Step 3: This step is not important, we can print out the array to verify if the output is correct.</p>
+
 ```py
 squared_values
 array([    1,     4,     9,    16,    25,    36,    49,    64,    81,
@@ -78,12 +86,14 @@ array([    1,     4,     9,    16,    25,    36,    49,    64,    81,
        10000])
 ```
 
-Step 4: We now need to transform this array from 1D to a 2D array with 10 rows and 10 columns. We can use the ```.reshape()``` function and assign it under a variable ```integer_arr```.
+<p align="justify">Step 4: We now need to transform this array from 1D to a 2D array with 10 rows and 10 columns. We can use the ```.reshape()``` function and assign it under a variable ```integer_arr```.</p>
+
 ```py
 integer_arr = values.reshape(10, 10)
 ```
 
-Step 5: Similarly to step 3, this step is not important, but we can print out the 10x10 array to visually verify if its created and reshaped correctly.
+<p align="justify">Step 5: Similarly to step 3, this step is not important, but we can print out the 10x10 array to visually verify if its created and reshaped correctly.</p>
+
 ```py
 integer_arr
 array([[    1,     4,     9,    16,    25,    36,    49,    64,    81,
@@ -114,7 +124,8 @@ array([[    1,     4,     9,    16,    25,    36,    49,    64,    81,
 division=(integer_arr %3==0)
 ```
 
-Step 7: Again, this step is not crucial, but can be useful to visualize/verify the output of the boolean array.
+<p align="justify">Step 7: Again, this step is not crucial, but can be useful to visualize/verify the output of the boolean array.</p>
+
 ```py
 division
 array([[False, False,  True, False, False,  True, False, False,  True,
@@ -139,12 +150,13 @@ array([[False, False,  True, False, False,  True, False, False,  True,
         False]])
 ```
 
-Step 8: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible```.
+<p align="justify">Step 8: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible```.</p>
 ```py
 divisible_by_3=array[division]
 ```
 
-Step 9: We now print the array for verification purposes.
+<p align="justify">Step 9: We now print the array for verification purposes.</p>
+
 ```py
 divisible_by_3
 array([[False, False,  True, False, False,  True, False, False,  True,
@@ -169,12 +181,13 @@ array([[False, False,  True, False, False,  True, False, False,  True,
         False]])
 ```
 
-Step 10: We can finally save the values stored in variable ```divisible_by_3``` into a ```.npy``` file named ```div_by_3.npy```.
+<p align="justify">Step 10: We can finally save the values stored in variable ```divisible_by_3``` into a ```.npy``` file named ```div_by_3.npy```.</p>
+
 ```py
 np.save("div_by_3.npy", divisible_by_3)
 ```
 
-Step 11: Run ```div_by_3.npy``` to check whether it saved the values.
+<p align="justify">Step 11: Run ```div_by_3.npy``` to check whether it saved the values.</p>
 ```py
 loaded=np.load("div_by_3.npy")
 loaded
