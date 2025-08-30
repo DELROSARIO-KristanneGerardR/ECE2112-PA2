@@ -50,42 +50,47 @@ Step 2: <p align="justify"> We now want an array of perfect squares from 1 to 10
 squared_values = np.arange(1, 101) ** 2
 ```
 
-Step 3: We now need to transform this array from 1D to a 2D array with 10 rows and 10 columns. We can use the ```.reshape()``` function and assign it under a variable ```integer_arr```.
+Step 3: This step is not important, we can print out the array to verify if the output is correct.
+```py
+squared_values
+```
+
+Step 4: We now need to transform this array from 1D to a 2D array with 10 rows and 10 columns. We can use the ```.reshape()``` function and assign it under a variable ```integer_arr```.
 ```py
 integer_arr = values.reshape(10, 10)
 ```
 
-Step 4: Though this step is not important, but we can print out the 10x10 array to visually verify if its created and reshaped correctly.
+Step 5: Similarly to step 3, this step is not important, but we can print out the 10x10 array to visually verify if its created and reshaped correctly.
 ```py
 integer_arr
 ```
 
-Step 5: <p align="justify"> Now that we have the 10x10 array which has the squares of the first 100 integers, we can now proceed to the other part, which is to determine the elements that are divisible by 3. We can create a boolean array for divisibility. This takes every element in the array, computes the remainder when dividing by 3 (```%3```), and checks if the remainder is equal to zero (```==0```). We will now finally store it under a variable named ```division```, which will print out the said array with the same dimensions with True if the element is divisible by 3 and False if not. </p>
+Step 6: <p align="justify"> Now that we have the 10x10 array which has the squares of the first 100 integers, we can now proceed to the other part, which is to determine the elements that are divisible by 3. We can create a boolean array for divisibility. This takes every element in the array, computes the remainder when dividing by 3 (```%3```), and checks if the remainder is equal to zero (```==0```). We will now finally store it under a variable named ```division```, which will print out the said array with the same dimensions with True if the element is divisible by 3 and False if not. </p>
 ```py
 division=(integer_arr %3==0)
 ```
 
-Step 6: Again, this step is not crucial, but can be useful to visualize/verify the output of the boolean array.
+Step 7: Again, this step is not crucial, but can be useful to visualize/verify the output of the boolean array.
 ```py
 division
 ```
 
-Step 7: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible```.
+Step 8: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible```.
 ```py
 divisible_by_3=array[division]
 ```
 
-Step 8: We now print the array for verification purposes.
+Step 9: We now print the array for verification purposes.
 ```py
 divisible_by_3
 ```
 
-Step 9: We can finally save the values stored in variable ```divisible_by_3``` into a ```.npy``` file named ```div_by_3.npy```.
+Step 10: We can finally save the values stored in variable ```divisible_by_3``` into a ```.npy``` file named ```div_by_3.npy```.
 ```py
 np.save("div_by_3.npy", divisible_by_3)
 ```
 
-Step 10: Run ```div_by_3.npy``` to check whether it saved the values.
+Step 11: Run ```div_by_3.npy``` to check whether it saved the values.
 ```py
 loaded=np.load("div_by_3.npy")
 loaded
