@@ -55,7 +55,8 @@ Step 1: Same as the previous problem, we import the ```numpy``` library before w
 import numpy as np
 ```
 
-Step 2: <p align="justify"> We now want an array of perfect squares from 1 to 100. We can use this by using the ```np.arange()``` function. However, this will only list the integers from 1 to 100 and will not list their perfect squares. So, we need to raise each number in the array by a power of 2 using the ```**2``` operator. We can now then store this under the variable ```squared_values```.</p>
+<p align="justify">Step 2: We now want an array of perfect squares from 1 to 100. We can use this by using the ```np.arange()``` function. However, this will only list the integers from 1 to 100 and will not list their perfect squares. So, we need to raise each number in the array by a power of 2 using the ```**2``` operator. We can now then store this under the variable ```squared_values```.</p>
+
 ```py
 squared_values = np.arange(1, 101) ** 2
 ```
@@ -107,7 +108,8 @@ array([[    1,     4,     9,    16,    25,    36,    49,    64,    81,
         10000]])
 ```
 
-Step 6: <p align="justify"> Now that we have the 10x10 array which has the squares of the first 100 integers, we can now proceed to the other part, which is to determine the elements that are divisible by 3. We can create a boolean array for divisibility. This takes every element in the array, computes the remainder when dividing by 3 (```%3```), and checks if the remainder is equal to zero (```==0```). We will now finally store it under a variable named ```division```, which will print out the said array with the same dimensions with True if the element is divisible by 3 and False if not. </p>
+<p align="justify">Step 6: Now that we have the 10x10 array which has the squares of the first 100 integers, we can now proceed to the other part, which is to determine the elements that are divisible by 3. We can create a boolean array for divisibility. This takes every element in the array, computes the remainder when dividing by 3 (```%3```), and checks if the remainder is equal to zero (```==0```). We will now finally store it under a variable named ```division```, which will print out the said array with the same dimensions with True if the element is divisible by 3 and False if not. </p>
+
 ```py
 division=(integer_arr %3==0)
 ```
