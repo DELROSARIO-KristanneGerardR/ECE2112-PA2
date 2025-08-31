@@ -138,7 +138,7 @@ array([[False, False,  True, False, False,  True, False, False,  True,
         False]])
 ```
 
-Step 8: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible```.
+Step 8: We now need to list out the elements in the array where its divisible by 3. We can use the boolean array as an index for the original array, which will return an array of only those numbers where its boolean value is True. We then store this under the variable ```divisible_by_3```.
 ```py
 divisible_by_3=array[division]
 ```
