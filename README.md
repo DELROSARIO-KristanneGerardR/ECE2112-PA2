@@ -146,26 +146,9 @@ divisible_by_3=array[division]
 Step 9: We now print the array for verification purposes.
 ```py
 divisible_by_3
-array([[False, False,  True, False, False,  True, False, False,  True,
-        False],
-       [False,  True, False, False,  True, False, False,  True, False,
-        False],
-       [ True, False, False,  True, False, False,  True, False, False,
-         True],
-       [False, False,  True, False, False,  True, False, False,  True,
-        False],
-       [False,  True, False, False,  True, False, False,  True, False,
-        False],
-       [ True, False, False,  True, False, False,  True, False, False,
-         True],
-       [False, False,  True, False, False,  True, False, False,  True,
-        False],
-       [False,  True, False, False,  True, False, False,  True, False,
-        False],
-       [ True, False, False,  True, False, False,  True, False, False,
-         True],
-       [False, False,  True, False, False,  True, False, False,  True,
-        False]])
+array([   9,   36,   81,  144,  225,  324,  441,  576,  729,  900, 1089,
+       1296, 1521, 1764, 2025, 2304, 2601, 2916, 3249, 3600, 3969, 4356,
+       4761, 5184, 5625, 6084, 6561, 7056, 7569, 8100, 8649, 9216, 9801])
 ```
 
 Step 10: We can finally save the values stored in variable ```divisible_by_3``` into a ```.npy``` file named ```div_by_3.npy```.
